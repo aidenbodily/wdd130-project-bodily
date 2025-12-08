@@ -10,36 +10,85 @@
     <header>
         <nav>
            <a class="photography" href="subpage1.html">Photography</a>
-           <img class="logo" src="images/aiden logo.png" alt="logo">
+           <img class="logo" src="images/Logo.svg" alt="logo">
            <a class="videography" href="subpage2.html">Videography/Designs</a>
         </nav>
     </header>
     <main>
         <h4>About me</h4>
         <h1>Aiden Bodily :)</h1>
-        <p>random stuff</p>
+        <p>I’m a 22 year old cybersecurity student who enjoys photography, videography, and graphic design. These are some of my best works, and what I used to create them.</p>
 
-        <div class="accordion">
-            <div class="accordion-header">
-                <span>My Line of Text</span>
-                <span class="arrow">&#9662;</span> <!-- Down arrow -->
-            </div>
-
-            <div class="accordion-content">
-                <p>
-                    This is the paragraph that opens and closes when you click the arrow.
-                </p>
-            </div>
+        <!-- Buttons -->
+        <div class = "button-box">
+            <a class="photography" href="subpage1.html">Photos</a>
         </div>
+        <div class = "button-box">
+            <a class="videography" href="subpage2.html">Other Media</a>
+        </div>
+
+        <h1>What I Use</h1>
+        <p>This is a list of all the gear and software I use for my projects</p>
+
+        <!-- Accordian -->
+        <button class="accordion">What Video Camera?</button>
+        <div class="panel">
+            <p>I have mainly recently been using the Ordro HDV-V88, which is an old cheap Chinese 1080p camcorder that has barely any surviving evidence on the internet. I’m hoping to acquire an actual VHS camera sometime soon to help with the nostalgic look but this is the best I’ve got at the moment.</p>
+        </div>
+
+        <button class="accordion">What Film Camera?</button>
+        <div class="panel">
+            <p>I use a Pentax Espoo 928, which is a simple point and shoot with a zoom that was released by Pentax in 1994, I bought it on eBay for around $35 and typically use Kodak Gold 200, or Kodak Portra 400/800 to shoot.</p>
+        </div>
+
+        <button class="accordion">What Video Editing Software?</button>
+        <div class="panel">
+            <p>I use Adobe Premiere Pro and occasionally Adobe After Effects.</p>
+        </div>
+
+        <button class="accordion">What Photo Editing Software?</button>
+        <div class="panel">
+            <p>I don’t typically edit my photos, but if I do I use Adobe Photoshop or Adobe Lightroom.
+            </p>
+        </div>
+
+        <button class="accordion">What graphic Design Software?</button>
+        <div class="panel">
+            <p>I use Adobe Illustrator and occasionally Adobe Photoshop.
+            </p>
+        </div>
+
 
 
 
     </main>
     <footer>
-        <img class="logo" src="images/aiden logo.png" alt="logo">
+        <img class="logo" src="images/Logo.svg" alt="logo">
         <a class="photography" href="subpage1.html">Photography</a>
         <a class="othermedia" href="subpage2.html">Other Media</a>
 
     </footer>
+
+   <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+            /* Toggle between adding and removing the "active" class,
+            to highlight the button that controls the panel */
+            this.classList.toggle("active");
+
+            /* Toggle between hiding and showing the active panel */
+            var panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
+            panel.style.display = "none";
+            } else {
+            panel.style.display = "block";
+            }
+        });
+        }
+   </script> 
+
 </body>
 </html>
