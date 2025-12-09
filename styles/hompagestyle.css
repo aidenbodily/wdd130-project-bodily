@@ -1,95 +1,223 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Navigation */
-header{
-    background-color: #171717;
-}
-
-nav{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    background-color: #bb7fe9;
-    text-align: center;
-}
-
-nav a{
-    text-decoration: none;
-    color: #ECECEC;
-}
-
-.photography{
-    grid-column: 1/2;
-}
-
-nav .logo{
-    width: 300px;
-    height: 100px;
-    object-fit: cover;
-    grid-column: 2/3;
-
-}
-
-.videography{
-    grid-column: 3/4;
-}
-
 /* Body */
 
 body{
     text-align: center;
     background-color: #171717;
     color: #ECECEC;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navigation and header */
+header{
+    background-color: #171717;
+}
+
+nav {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-items: center;
+    justify-content: center;
+    background-color: #bb7fe9;
+    padding: 15px;
+    column-gap: 65px;
+}
+
+nav a{
+    text-decoration: none;
+    color: #ECECEC;
+    margin: 0 10px;
+    font-size: 22px;
+    
+}
+
+.photography{
+    grid-column: 1/2;
+}
+
+nav .logo {
+    width: 250px;
+    height: auto;
+    justify-self: center;
+}
+
+.videography{
+    grid-column: 3/4;
+}
+
+/* main */
+
+main{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 0px 150px 0px 150px;
+}
+
+h4{
+    color: #e9d574;
+    margin: 30px;
+}
+
+h1{
+    margin: 10px;
+}
+
+.aboutme{
+    margin: 10px 0px 25px 0px;
+}
+
+.button-box {
+    display: flex;             
+    justify-content: center;   
+    gap: 20px;                 
+    margin: 35px;
+}
+
+.button-box .photos {
+    flex: 0 0 auto;            
+    display: inline-block;     
+    width: auto;               
+    padding: 15px 30px;        
+    font-size: 18px;           
+    text-decoration: none;     
+    border-radius: 5px;        
+    background-color: #bb7fe9;
+    color: #e9d574;            
+    text-align: center;        
+    transition: 0.3s;          
+}
+
+.button-box .othermedia {
+    flex: 0 0 auto;            
+    display: inline-block;     
+    width: auto;               
+    padding: 15px 30px;        
+    font-size: 18px;           
+    text-decoration: none;     
+    border-radius: 5px;        
+    background-color: #e9d574;
+    color: #171717;               
+    text-align: center;        
+    transition: 0.3s;          
+}
+
+
+.button-box .photos:hover {
+    background-color: #a65ed6;
+    cursor: pointer;
+}
+
+.button-box .othermedia:hover {
+    background-color: #dbb75c;
+    cursor: pointer;
+}
+
+.projects{
+    margin-bottom: 25px;
 }
 
 /* Accordian */
 /* Style the buttons that are used to open and close the accordion panel */
 .accordion {
-  background-color: #eee;
-  color: #444;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  text-align: left;
-  border: none;
-  outline: none;
-  transition: 0.4s;
+    background-color: #171717;
+    color: #dbb75c;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    border: 2px solid #ECECEC;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 500;
+    font-size: 18px;
 }
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 .active, .accordion:hover {
-  background-color: #ccc;
+    background-color: #777777;
+}
+
+.accordion:after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: #bb7fe9;
+    float: right;
+    margin-left: 5px;
 }
 
 /* Style the accordion panel. Note: hidden by default */
 .panel {
   padding: 0 18px;
-  background-color: white;
+  background-color: #ECECEC;
   display: none;
   overflow: hidden;
+  color: #171717;
+}
+
+.panel p{
+    font-weight: normal;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    line-height: 1.5;
+
 }
 
 /* Footer */
 footer{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: auto auto auto;
     text-align: center;
+    background-color: #bb7fe9;
+    margin-top: 25px;
+    padding: 15px;
+    align-items: center;
+    column-gap: 30px;
+    
 }
 
 footer .logo{
     grid-column: 1/2;
     width: 300px;
-    height: 100px;
-    object-fit: cover;
+    height: auto;
+    justify-self: center;
+    padding: 0px 0px 0px 50px;
+    
 }
 
 footer .photography{
     grid-column: 2/3;
+    text-decoration: none;
+    color: #ECECEC;
+    font-size: 25px;
 }
 
 footer .othermedia{
     grid-column: 3/4;
+    text-decoration: none;
+    color: #ECECEC;
+    font-size: 25px;
+}
+
+/* copyright */
+.copyright{
+    text-align: center;
+    padding: 15px 0;
+    color: #ECECEC;
+    background-color: #bb7fe9;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.copyright a {
+    color: #ECECEC;
+    text-decoration: none;
+    transition: color 0.3s;
 }
