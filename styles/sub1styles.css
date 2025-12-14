@@ -1,3 +1,10 @@
+:root{
+  --primary:#171717;
+  --secondary:#ECECEC;
+  --accent1:#e9d574;
+  --accent2:#bb7fe9;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -5,18 +12,23 @@
 }
 
 body {
+  background-color: var(--primary);
   font-family: Arial, sans-serif;
-  color: #222;
+  color: var(--secondary);
   line-height: 1.6;
 }
 
 a {
   text-decoration: none;
-  color: #222;
+  color: var(--accent1);
+}
+
+a:hover {
+  color:var(--primary);
 }
 
 header {
-  background: #eaeaea;
+  background: var(--accent2);
   padding: 20px 40px;
 }
 
@@ -37,7 +49,7 @@ main {
   text-transform: uppercase;
   font-size: 14px;
   letter-spacing: 1px;
-  color: #666;
+  color: var(--secondary);
   margin-bottom: 10px;
 }
 
@@ -49,7 +61,7 @@ h1 {
 .description {
   max-width: 600px;
   margin: 0 auto 60px;
-  color: #555;
+  color: var(--secondary);
 }
 
 .card-grid {
@@ -85,7 +97,7 @@ h1 {
 .tag {
   font-size: 12px;
   text-transform: uppercase;
-  color: #777;
+  color: var(--secondary);
   margin-bottom: 8px;
   display: block;
 }
@@ -96,7 +108,7 @@ h1 {
 }
 
 footer {
-  background: #f5f5f5;
+  background: var(--accent2);
   padding: 30px 40px;
   margin-top: 80px;
   font-size: 14px;
@@ -118,11 +130,11 @@ footer {
 .footer-bottom {
   text-align: center;
   margin-top: 20px;
-  color: #777;
+  color: var(--accent1);
 }
 
 .footer-bottom a {
-  color: #777;
+  color: var(--accent1);
 }
 
 .logo {
@@ -137,6 +149,16 @@ footer {
 
 .photo-collection {
   display: grid;
-  grid-template-columns: repeat(3, minmax(250px, 1fr));
+  grid-template-columns: repeat(2, minmax(250px, 1fr));
   gap: 30px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.card-image-image {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  border-bottom: 1px solid var(--secondary);
+  object-fit: cover;
 }
